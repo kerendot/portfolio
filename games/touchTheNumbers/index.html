@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Touch The Numbers</title>
+    <link rel="stylesheet" href="lib/Animate css/animate.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+</head>
+
+<body onload="init()">
+
+    <!-- Modal -->
+    <div class="modal fade" id="victoryModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="victoryModalTime">Time: <span><span></h2>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                        </button>
+                </div>
+                <div class="modal-body">
+                    Get a Premium account to reveal Highscores feature!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <header>
+        <h1>Touch The Numbers</h1>
+    </header>
+    <main>
+        <div class="btn btn-default" id="startGameBtn" onclick="startGame()">Start Game</div>
+        <div>Select Level:</div>
+        <div class="containerLevels">
+            <form>
+                <label class="radio-inline"><input type="radio" name="radioLvl" value="4" checked>Easy (16)</label>
+                <label class="radio-inline"><input type="radio" name="radioLvl" value="5">Hard (25)</label>
+                <label class="radio-inline"><input type="radio" name="radioLvl" value="6">Expert (36)</label>
+            </form>
+        </div>
+        <section class="game-area">
+            <div class="game-panel">
+                <div class="next-number h3">Next Number: <span>1</span></div>
+                <div class="h3">Time:<span id="timer"> 0</span> s</div>
+            </div>
+                <div class="get-ready"></div>             
+                <table class="boardTbl" style="opacity:0">
+                </table>  
+        </section>
+
+        <!--<table class="testTbl">
+            <tr>
+                <td id="cell3" class="marked">10</td>
+                <td id="cell1" class="animated shake">1</td>
+                <td id="cell2" class="animated rotateIn">25</td>
+            </tr>
+        </table>-->
+
+    </main>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/tests.js"></script>
+    <script src="js/main.js"></script>
+
+
+</body>
+
+</html>

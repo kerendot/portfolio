@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+SC" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+
+    <title>Keren's Portfolio</title>
+</head>
+
+<body onload="init()">
+    <main>
+        <div class="main-container">
+            <div class="open-menu" onclick="openNav()">&#9776;</div>
+            <h1>Keren Cohen - Portfolio</h1>
+            <p>This site was designed using Sass and Bootstrap</p>
+
+            <!--side nav-->
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="about.html">About</a>
+                <div onclick="categoryClicked('.games',gGameCards)">Games </div>
+                <div onclick="categoryClicked('.utils',gUtilCards)">Utilities </div>
+            </div>
+
+            <!--categories selection-->
+            <div class="selection-container">
+                <div class="category-container games active" onclick="categoryClicked('.games',gGameCards)">
+                    <img src="img/games-folder.png" class="image">
+                    <div class="middle">
+                        <div class="text">Games</div>
+                    </div>
+                </div>
+                <div class="category-container utils" onclick="categoryClicked('.utils',gUtilCards)">
+                    <img src="img/utils-folder.png" class="image">
+                    <div class="middle">
+                        <div class="text">Utils</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cards-container">
+                <div class="row">
+
+                    <!--<div  class="col-sm-6 col-md-4">
+                    <div class="thumbnail card" onclick="toggleCardGrow(this)">
+                        <img src="img/bomb.png" alt="mine-sweeper game" >
+                        <div class="caption">
+                            <h3>Mine Sweeper</h3>
+                            <p>Try To find all the mines! <br>Be carefull not to blow up</p>
+                            <p><a href="#" class="btn btn-primary" role="button">Play</a>
+                        </div>
+                    </div>
+                </div>-->
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <h4>
+            Keren Cohen &copy; 2017
+        </h4>
+    </footer>
+
+    <script src="js/utils.js"></script>
+    <script src="js/sidenav.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Coding Academy</title>
+    <link rel="stylesheet" href="dist/style.css">
+</head>
+
+<body onload="init()">
+    <div class="container paper">
+        <header>
+            <div class="inner">
+                <i class="fa fa-cog"></i>
+                <!--<img src="assets/conf.png" />-->
+                <h1>Todos</h1>
+            </div>
+        </header>
+        <div class="content inner">
+            <ul class="todos clean-list">
+            </ul>
+
+            <!--<ul class="todos clean-list">
+                 <li class="flex space-between">
+                    <div>
+                        <input type="checkbox" id="c10" onchange="todoClicked(c10)" />
+                        <label for="c10"><span></span>keren</label>
+                    </div>
+                    <div>
+                        <span class="move-arrows">
+                            <i class="fa fa-arrow-up" onclick="moveUp(10)"></i> 
+                            <i class="fa fa-arrow-down" onclick="moveDown(10)"></i>
+                        </span>
+                    </div>                    
+                </li>
+
+            </ul>-->
+
+
+            <div class="add-todo">
+                <i class="fa fa-plus" onclick="addTodo()"></i>
+                <input type='text' placeholder="Enter a new task">
+            </div>
+            </div>
+            <div class="footer content inner">
+                <div>
+                    <i class="trash-btn fa fa-trash-o" onclick="archiveItems()"></i>
+                </div>
+
+                <div>
+                    <i class="restore-btn fa fa-undo hidden" onclick="restoreItems()"></i>
+                </div>
+
+                <div onclick="setFilter(event)">
+                    <label><input type="radio" name="filter-shown" value="all"> All </label> |
+                    <label><input type="radio" name="filter-shown" value="active"> Active </label> |
+                    <label><input type="radio" name="filter-shown" value="archived"> History </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

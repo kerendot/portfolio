@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Simple Calendar</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <header>
+        <h2>My Calendar</h2>
+    </header>
+
+    <div class="popup-bg hide">
+        <div class="popups">
+            <div class="popup new-meeting hide">Title:<br>
+                <input type="text" id="inputTitle"><br>Start:<br>
+                <input type="text" id="inputStart"><br>End:<br>
+                <input type="text" id="inputEnd"><br>Participants:<br>
+                <input type="text" id="inputParticipants"><br><br>
+                <p onclick="createMeetingClicked()">Create</p>
+                <p onclick="cancelClicked()">Cancel</p>
+            </div>
+
+            <div class="popup meeting-count hide">Name?:<br>
+                <input type="text" id="inputName"><br>
+                <div class="meeting-count-output">-</div>
+                <p onclick="calcMeetingsClicked()">Calcutate</p>
+                <p onclick="closeClicked()">Close</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="ops-panel">
+        <div class="button add" onclick="actionBtnClicked('.new-meeting')">Add a meeting</div>
+        <div class="button find" onclick="findNextMeetingClicked()">Find next meeting</div>
+        <div class="button count" onclick="actionBtnClicked('.meeting-count')">Count meetings</div>
+    </div>
+
+    <div class="meetings-container">
+    </div>
+
+    <script src="lib/js/moment.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/tests.js"></script>
+</body>
+
+</html>

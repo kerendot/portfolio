@@ -1,0 +1,61 @@
+body {
+  background-color: beige;
+  font-family: 'Inconsolata', monospace; }
+
+h1 {
+  text-align: center; }
+
+.modal-title, .modal-body {
+  text-align: center; }
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+section.game-area {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.game-panel {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+.get-ready {
+  width: 200px;
+  background-color: gainsboro;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 5em;
+  opacity: 1;
+  transition: opacity 0.5s; }
+
+.boardTbl {
+  border-spacing: 8px;
+  border-collapse: separate; }
+
+.boardTbl td {
+  background: #fcfc05;
+  background-image: linear-gradient(to bottom, #fcfc05, #b8952b);
+  color: #000000;
+  border-radius: 10px;
+  font-family: 'Baloo Bhaina', cursive;
+  font-size: 2em;
+  width: 3em;
+  height: 3em;
+  min-width: 3em;
+  min-height: 3em;
+  text-align: center;
+  transition: opacity 0.5s; }
+
+.boardTbl td:hover {
+  cursor: pointer;
+  background: #fcaf3c;
+  background-image: linear-gradient(to bottom, #fcaf3c, #d9a234); }
+
+.boardTbl td.marked {
+  background: #9c948b; }

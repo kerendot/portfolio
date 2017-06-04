@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Books Are Us</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+</head>
+
+<body onload="init()">
+
+    <header>
+        <div class="bg-img"></div>
+        <h1>Welcome to Keren's Bookshop</h1>
+    </header>
+
+    <main>
+        <button class="btn" onclick="newBookClicked()">Create a new book</button>
+
+        <!--popups-->
+        <div class="popup-bg hide">
+            <div class="popups">
+                <div class="popup new-book hide"><label>Add a new book</label><br>Title:<br>
+                    <input type="text" id="inputTitle" autofocus><br>Price:<br>
+                    <input type="text" id="inputPrice"><br>Image url (optional):<br>
+                    <input type="text" id="inputImgUrl"><br><br>
+                    <button onclick="createNewBookClicked()">Create</p>
+                    <button onclick="cancelNewBookClicked()">Cancel</p>
+                </div>       
+
+                <div class="popup update-book hide"><label> Update Book id <bookId></bookId></label><br>
+                    Current price: <currPrice></currPrice> <br>
+                    New price:<br>
+                    <input type="text" id="inputNewPrice"><br><br>
+                    <button onclick="confirmUpdateBookClicked()">Update</p>
+                    <button onclick="cancelUpdateBookClicked()">Cancel</p>
+                </div>
+            </div>
+        </div>
+
+        <section class="booksTbl">
+            <!--pagination-->
+            <!--<nav style='text-align:center', aria-label="Page navigation">
+                <ul class="pagination">
+                    <li>
+                        <a href="#">
+                            <span>&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="disabled"><a href="#">1</a></li>
+                    <li class="active"><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li>
+                        <a href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+                
+            </nav>
+            <nav aria-label="...">
+                <ul class="pagination">
+                    <li class="disabled">
+                        <span>
+                            <span aria-hidden="true">&laquo;</span>
+                        </span>
+                    </li>
+                    <li class="active">
+                        <span>1 <span class="sr-only">(current)</span></span>
+                    </li>
+                </ul>
+            </nav>-->
+
+            <table>
+               <tr>
+                    <td class="tb-head" onclick="sortByClicked('id')">id</td>
+                    <td class="tb-head" onclick="sortByClicked('title')">Title</td>
+                    <td class="tb-head" onclick="sortByClicked('price')">Price</td>
+                    <td colspan="3">Actions</td>
+                </tr>
+                <!--<tr>
+                    <td>1</td>
+                    <td>To kill a mockingbird</td>
+                    <td>100</td>
+                    <td><button>READ</button></td>
+                    <td style="text-align:center">UPDATE</td>
+                    <td style="text-align:center">DELETE</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Catcher in the Rhye</td>
+                        <td>150</td>
+                        <td>READ</td>
+                        <td>UPDATE</td>
+                        <td>DELETE</td>
+                    </tr>-->
+                    </table>
+                    </section>
+
+                    <section class="book-details hide">
+                        <book-details>
+                            <label>   <div class="details-title"> Book Title </div></label>
+                            <div>id: <span class="details-id"></span></div>
+                            <div>Price: <span class="details-price"></span></div>
+                            <div>Rate: <span class="details-rate"></span></div>
+                            <div>
+                                <span class="glyphicon glyphicon-thumbs-up" onclick="thumbClicked(this,true)"></span>
+                                <span class="glyphicon glyphicon-thumbs-down" onclick="thumbClicked(this,false)"></span>
+                            </div>
+                            <button onclick="closeBookDetailsClicked()">Hide details</button>
+                        </book-details>
+                        <book-img>
+                            <img class="img-responsive img-rounded" src="http://blogs.slj.com/afuse8production/files/2012/05/LittleWomen4.jpg" alt="">
+                        </book-img>
+                    </section>
+    </main>
+
+    <footer> Keren Cohen &copy; 2017</footer>
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

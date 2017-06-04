@@ -1,0 +1,123 @@
+body {
+    background-color: blanchedalmond;
+    text-align: center;    
+}
+
+h1 {
+    background-color:lightcoral;
+}
+
+.panel {
+    margin: 0 auto;
+    background-color: lightgrey;
+    width: 400px;
+    height:100px;    
+    
+}
+
+img {
+    height: 40px;
+}
+
+button{
+    margin: 20px;
+    display: inline-block;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.counter {
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    background-color: white;
+    padding: 5px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 200%;
+}
+
+.popup {
+
+    background-color:gold;
+    padding: 10px;
+    text-align:center;
+    visibility: hidden;
+    position:absolute;
+    top:100px;
+    left: 40%;
+    opacity: 0;
+    transition: opacity 0.5s;
+
+}
+
+table{
+    margin: 0 auto;
+    border: "1";
+    /*margin: 10px;*/   
+    background-color:lightgrey; 
+}
+
+.gameBoard {
+    border: 1px solid black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 200%;
+    padding: 20px;
+}
+
+.gameBoard td {
+    width: 60px;
+    height:60px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.cover {
+    background-color:lightsteelblue;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.plain-cell{
+    background-color:gainsboro;
+}
+
+.exploded-bomb{
+    background-color: red;
+}
+
+.wrong-mark{
+    background-color: yellow;
+}
+
+.negs1 {
+    color: blue;
+}
+
+.negs2 {
+    color:green;
+}
+
+.negs3 {
+    color: red;
+}
+
+.negs4 {
+    color:purple;
+}
+
+.negs5 {
+    color: yellow;
+}
+
+.negs6 {
+    color: aqua;
+}
+
+.negs7 {
+    color:darkorange;
+}
+
+.negs8 {
+    color:greenyellow;
+}

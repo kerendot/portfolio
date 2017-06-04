@@ -1,0 +1,12 @@
+{
+  "name": "guess-me",
+  "description": "Guess Me Game",
+  "scripts": {
+    "start": "npm-run-all --parallel serve styles",
+    "serve": "live-server",
+    "styles": "node-sass -w css/main.scss css/main.css"
+  },
+  "dependencies": {
+    "npm-run-all": "^4.0.2"
+  }
+}

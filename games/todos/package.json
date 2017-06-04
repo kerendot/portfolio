@@ -1,0 +1,21 @@
+{
+  "name": "codingacademy-todos",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "npm-run-all --parallel browser styles",
+    "browser": "live-server",
+    "styles": "node-sass scss/style.scss -o dist --watch",
+    "build": "rm -rf build && copyfiles assets/* index.html assets/fonts/**/* dist/* build"
+  },
+  "devDependencies": {
+    "copyfiles": "^1.0.0",
+    "node-sass": "^3.13.0",
+    "npm-run-all": "^3.1.1"
+  },
+  "dependencies": {
+    "font-awesome": "^4.7.0",
+    "normalize.css": "^5.0.0"
+  }
+}
