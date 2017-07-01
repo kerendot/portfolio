@@ -1,0 +1,33 @@
+body {
+    background-color: $bg-color;
+    text-align: center;
+    font-family: 'Alegreya SC', serif;
+    transition: background-color 0.5s;
+    margin: 0;
+}
+
+main{
+    margin: 20px;
+    margin-bottom: 50px;
+}
+
+.main-container{
+    max-width: $main-container-width;
+    width:98%;
+    margin: 0 auto;
+}
+
+h1 {
+    text-shadow: 4px 3px 0 $highlight-color, 9px 8px 0 rgba(0,0,0,0.15);
+    color: black;
+    font-size: 2em;
+     margin-bottom: 50px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0px;
+  background-color: #a4a8a9;
+  width: 100%;
+  text-align: center;
+}

@@ -1,0 +1,125 @@
+.header{
+    background: var(--nav-color);
+    height: 80px;
+    padding: 10px;
+    color: #fff; 
+
+    .logo{   
+        text-decoration: none;
+        font-family: var(--logo-font);
+        font-size: em(45px);
+        color: #fff; 
+    }
+
+    .hamburger{
+        display: block;
+        width:10%;
+        font-size: 3em;
+        margin: 7px;
+
+    }
+
+    .main-nav{
+        a{
+            color: #fff;
+            font-family: var(--main-font);
+            font-size: 20px;
+            &:hover{
+                text-decoration: none;
+                color:var(--section-color);
+            }
+        }
+
+        #arrow{
+            display: none;
+        }
+    }
+
+    .nav-item {
+        margin: 15px;
+
+        &.selected-item a{
+            color:var(--section-color);
+        }
+    }
+
+}
+
+#toggle-hamburger {
+    display: none;
+}
+
+.nav{
+    transform: translate(-2000px,0);    
+     transition: transform 0.3s ease;
+    position: relative;
+    z-index:99999;
+
+    .nav-list{
+        background-color: lightgrey;
+        flex-direction: column;
+        width:100%;
+        position: absolute;
+        padding: 0;
+    }
+
+    #arrow{
+        display: none;
+    }
+
+     .nav-item {
+        background-color: var(--nav-color);
+        
+        border-radius: 5px;
+        text-align: center;
+        line-height: 24px;
+        padding: 10px;
+        text-transform: uppercase;
+        margin:5px;
+        
+
+        a{
+            color: #fff;
+            font-family: var(--main-font);
+            &:hover{
+                text-decoration: none;
+                color:var(--section-color);
+            }
+        }
+
+        &.selected-item a{
+            color:var(--section-color);
+        }
+
+    }
+}
+
+// input[type=checkbox]:checked ~ .nav {
+//   transform: translate(0,0);
+// }
+
+input#toggle-hamburger:checked ~ .nav {
+  transform: translate(0,0);
+}
+
+@media screen and (min-width:$medium-breakpoint){
+    .header {
+        .hamburger{
+            display:none;
+        }
+
+        .main-nav{
+            display:block;
+        }
+    }
+}
+
+@media screen and (min-width:$medium-breakpoint){
+    .header .main-nav #arrow{
+        
+            display: block;
+        }
+}    
+
+
+

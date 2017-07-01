@@ -1,0 +1,30 @@
+.meme-cont{
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+
+    .btn-back{
+        font-size: 2em;
+        margin: 15px;
+    }
+
+    .canvas{
+        max-width: 90%;
+        height: auto;
+        margin: 10px auto;
+    }
+
+    .action-cont{
+        padding:10px;
+    }
+
+    .btn-default{
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+    .btn-gen-meme{
+        margin: 20px;
+        padding: 10px;
+    }
+}

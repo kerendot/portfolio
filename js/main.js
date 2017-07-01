@@ -8,7 +8,8 @@ var gActiveCategory;
 function init() {
     gGameCards = getGameCards();
     gUtilCards = getUtilCards();
-    gActiveCategory='.games'
+    gActiveCategory='.games';
+
     renderCards(gGameCards);
     closeNav();
 }
@@ -27,27 +28,30 @@ function renderCards(cards) {
             '<p><a href=" ' + card.url + ' " class="btn btn-default" role="button">Start</a></div></div></div>'
     });
 
-    var elGrid = document.querySelector('.row');
-    elGrid.innerHTML = htmlStr;
+    var elCards = document.querySelector('.cards');
+    elCards.innerHTML = htmlStr;
+    elCards.classList.add('shown');
     
 }
 
 function getGameCards() {
     var cards = [];
-    cards.push(createCard('Touch The Numbers', 'img/numbers.png', 'touch the numbers', 'Implementing setInterval', 'and CSS animations', 'games/touchTheNumbers/index.html'));
-    cards.push(createCard('Simon', 'img/simon.png', 'simon', 'Some cool Javascript', 'and CSS', 'games/simon/index.html'));
-    cards.push(createCard('Mine Sweeper', 'img/bomb.png', 'mine-sweeper game', 'Implementing some basic', 'Javascript power', 'games/mineSweeper/index.html'));
-    cards.push(createCard('Pacman', 'img/pacman.png', 'pacman game', 'Implementing pure CSS animations', 'and keyboard control', 'games/pacman/index.html'));
-    cards.push(createCard('Sokoban', 'img/sokoban.png', 'Sokoban game', 'Implementing keyboard control', 'and Javascript power', 'games/sokoban/index.html'));
+    cards.push(createCard('Touch The Numbers', 'img/numbers.png', 'touch the numbers', 'Implementing setInterval', 'and CSS animations', 'projects/touchTheNumbers/index.html'));
+    cards.push(createCard('Simon', 'img/simon.png', 'simon', 'Some cool Javascript', 'and CSS', 'projects/simon/index.html'));
+    cards.push(createCard('Mine Sweeper', 'img/bomb.png', 'mine-sweeper game', 'Implementing some basic', 'Javascript power', 'projects/mineSweeper/index.html'));
+    cards.push(createCard('Pacman', 'img/pacman.png', 'pacman game', 'Implementing pure CSS animations', 'and keyboard control', 'projects/pacman/index.html'));
+    cards.push(createCard('Sokoban', 'img/sokoban.png', 'Sokoban game', 'Implementing keyboard control', 'and Javascript power', 'projects/sokoban/index.html'));
 
     return cards;
 }
 
 function getUtilCards() {
     var cards = [];
-    cards.push(createCard('MyBookshop', 'img/books.png', 'my bookshop', 'Implementing LocalStorage and', 'framework-free CSS', 'games/booksAreUs/index.html'));
-    cards.push(createCard('Simple Calendar', 'img/calendar.png', 'simple calendar game', 'Implementing a simple', 'responsive design', 'games/simpleCalendar/index.html'));
-    cards.push(createCard('To-Do organizer', 'img/todos.png', 'to-do organizer', 'Implementing LocalStorage', 'and CSS pseudo-elements', 'games/todos/index.html'));
+    cards.push(createCard('MyBookshop', 'img/books.png', 'my bookshop', 'Implementing LocalStorage and', 'framework-free CSS', 'projects/booksAreUs/index.html'));
+    cards.push(createCard('To-Do organizer', 'img/todos.png', 'to-do organizer', 'Implementing LocalStorage', 'and CSS pseudo-elements', 'projects/todos/index.html'));
+    cards.push(createCard('Blog Template', 'img/blog.png', 'Blog template', 'Responsive web design', 'Implementing media queries', 'projects/blogin/index.html'));
+    cards.push(createCard('MemeGen', 'img/meme.png', 'Meme Generator', 'Mobile First design', 'Using jQuery and bootstrap', 'projects/memeGenerator/index.html'));
+    cards.push(createCard('Simple Calendar', 'img/calendar.png', 'simple calendar game', 'Implementing a simple', 'responsive design', 'projects/simpleCalendar/index.html'));
 
     return cards;
 }
@@ -70,7 +74,11 @@ function categoryClicked(selector,toRender){
     elCurrCategory.classList.remove('active');
     elNewCategory.classList.add('active');
     gActiveCategory = selector;
-    renderCards(toRender);
+    var elCards = document.querySelector('.cards');
+    elCards.classList.remove('shown');
+    setTimeout(function() {
+        renderCards(toRender);        
+    }, 300);
 }
 
 //relevant only for mobile:

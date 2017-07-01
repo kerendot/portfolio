@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Play Simon</title>
+
+</head>
+
+<body class="container" onload="init();">
+
+  <section>
+    <div class="simon-container">
+      <h1>SIMON</h1>       
+      <div class="simon-panel">
+        <div class="pad red"></div>
+        <div class="pad green"></div>
+        <div class="pad yellow"></div>
+        <div class="pad blue"></div>
+        <div class="display" id="display"></div>
+      </div>
+      <h2 class="level">Level <span>1</span></h2>
+    </div>​
+
+  </section>
+
+  <script src="lib/audiosynth/audiosynth.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

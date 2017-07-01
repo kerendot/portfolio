@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Meme Generator</title>
+  <link rel="stylesheet" href="dist/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body onload="init()">
+  <div class="top-container">
+
+  <input type="checkbox" id="toggle-hamburger" hidden>
+
+
+
+
+
+  <!-------------------HEADER---------------------->
+
+  <header class="header flex space-between">
+    <div>
+      <a class="logo">MemeGen</a>
+    </div>
+    <label class="hamburger" for="toggle-hamburger">&equiv;</label>
+
+    <nav class="main-nav" hidden>
+      <ul class="main-nav-list clean-list flex">
+        <li class="nav-item selected-item"><a href="#">Meme Gallery</a></li>
+        <li class="nav-item"><a href="#">About</a></li>
+        <li class="nav-item" id="arrow"><a href="#">^</a></li>
+        <li class="nav-item"><a href="#">Blog</a></li>
+        <li class="nav-item"><a href="#">Get in Touch</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <nav class="nav">
+    <ul class="nav-list clean-list flex">
+      <li class="nav-item selected-item"><a href="#">Meme Gallery</a></li>
+      <li class="nav-item"><a href="#">About</a></li>
+      <li class="nav-item" id="arrow"><a href="#">^</a></li>
+      <li class="nav-item"><a href="#">Blog</a></li>
+      <li class="nav-item"><a href="#">Get in Touch</a></li>
+    </ul>
+  </nav>
+
+  <!-------------------MAIN-CONTAINER---------------------->
+  <!--used for toggling 'hidden' when and image is selected-->
+
+  <div class="main-cont">
+
+    <div class="search-cont">
+      <i class="fa fa-search" onclick="toggleSearchBar()"></i>
+      <div class="search-bar input-group" style="display: none">
+        <input class="form-control" type="text" name="search" id="search" placeholder="Search...">
+        <span class="input-group-addon" onclick="filter()"> <span class="fa fa-search"></span></span>
+      </div>
+    </div>
+
+    <!--------------------GALLERY---------------------->
+
+    <div class="gallery-cont">
+
+      <!--<div class= "img-cont">
+      <img class= "img " src="assets/img/1.jpg"/>
+    </div>
+
+    <div class= "img-cont">
+      <img class= "img " src="assets/img/2.jpg"/>
+    </div>
+
+    <div class= "img-cont">
+      <img class= "img " src="assets/img/3.jpg"/>
+    </div>-->
+
+    </div>
+
+
+    <!-------------------TAG-CLOUD-------------------->
+
+    <div class="cloud-cont">
+
+    </div>
+
+    <!-------------------DEVELOPERS------------------>
+
+    <div class="devs-cont flex align-center">
+
+      <div class="dev flex ">
+        <div class="dev-img"><img class="img-responsive img-rounded" src="assets/profile/keren.jpg" /></div>
+        <div class="dev-info flex flex-column space-between">
+          <h3>Keren Cohen</h3>
+          <h4>Software Developer</h4>
+          <p>Young, passionate and beautiful!</p>
+          <ul class="social-links clean-list flex align-center space-netween">
+            <li class="facebook btn fa fa-facebook"> </li>
+            <li class="twitter btn fa fa-twitter"></li>
+            <li class="google-plus btn fa fa-google-plus"></li>
+            <li class="pinterest btn fa fa-pinterest-p"></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="dev flex ">
+        <div class="dev-img"><img class="img-responsive img-rounded" src="assets/profile/moshe.jpg" /></div>
+        <div class="dev-info flex flex-column space-between">
+          <h3>Moshe Mantsur</h3>
+          <h4>Software Developer</h4>
+          <p>Bold, charismatic and unexpected!</p>
+          <ul class="social-links clean-list flex align-center space-netween">
+            <li class="facebook btn fa fa-facebook"> </li>
+            <li class="twitter btn fa fa-twitter"></li>
+            <li class="google-plus btn fa fa-google-plus"></li>
+            <li class="pinterest btn fa fa-pinterest-p"></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+  </div>
+
+  <!-------------------END-OF-MAIN-CONTAINER---------------------->
+
+  <!-------------------MEME-EDITOR-------------------->
+
+  <div class="meme-cont" hidden>
+
+    <i class="btn-back fa fa-arrow-left"></i>
+    <div class="canvas-cont flex justify-center">
+      <canvas class="canvas"></canvas>
+    </div>
+
+    <div class="action-cont form-group">
+
+      <div class="line-cont">
+        <div class="form-group">
+          <label for="">Top:</label>
+          <input class="form-control" id="line-0" type="text" placeholder="Insert text">
+        </div>
+        <div class="toolbar">
+          <div class="btn btn-default btn-font-inc" id="btn-font-inc-0">+</div>
+          <div class="btn btn-default btn-font-dec" id="btn-font-dec-0">-</div>
+          <div class="btn btn-default btn-border" id="btn-border-0">A</div>
+        </div>
+      </div>
+
+      <div class="line-cont">
+        <div class="form-group">
+          <label for="">Bottom:</label>
+          <input class="form-control" id="line-1" type="text" placeholder="Insert text">
+        </div>
+        <div class="toolbar">
+          <div class="btn btn-default btn-font-inc" id="btn-font-inc-1">+</div>
+          <div class="btn btn-default btn-font-dec" id="btn-font-dec-1">-</div>
+          <div class="btn btn-default btn-border" id="btn-border-1">A</div>
+        </div>
+      </div>
+
+      <div class="btn btn-primary center-block" onclick="generateMeme()">Generate Meme</div>
+
+    </div>
+
+
+  </div>
+
+  <!-------------------FOOTER/CONTACT-------------------->
+  <footer>
+    <input type="checkbox" id="toggle-contact" hidden>
+    <div class="contact-small flex justify-center">
+      <label class="btn-contact btn" for="toggle-contact">Get in touch!</label>
+    </div>
+
+
+    <div class="contact-full" hidden>
+      <div class="contact-full-cont flex flex-column align-center">
+        <h2 hidden>Get in Touch</h2>
+        <h3 hidden>Send us your details and we'll reply</h2>
+          <div class="form-group">
+            <input class="form-control" type="text" placeholder="Name">
+          </div>
+          <div class="form-group">
+            <input class="form-control" type="email" placeholder="Email">
+          </div>
+          <div class="form-group">
+            <input class="form-control" type="text" placeholder="Subject">
+          </div>
+          <div class="form-group">
+            <input class="form-control" type="text" placeholder="Write your massage here...">
+          </div>
+          <div class="flex justify-center">
+            <button class="btn-contact btn">Send</button>
+          </div>
+      </div>
+    </div>
+
+
+  </footer>
+  </div>
+
+  <script src="../../node_modules/jquery/dist/jquery.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/keywords-cloud.js"></script>
+  <script src="js/editor.js"></script>
+  <script src="js/search-bar.js"></script>
+</body>
+</html>

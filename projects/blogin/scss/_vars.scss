@@ -1,0 +1,26 @@
+$container-width: 1500px;
+$inner-container-width:980px;
+$mobile-breakpoint: 730px;
+$min-breakpoint: 400px;
+
+:root {
+  /* Layout */
+  --container-width: $container-width;
+  --inner-container-width: $inner-container-width;
+  /* Fonts */
+  --logo-font:Euro;
+  --main-font:Lato;
+  /* Colors */
+  --header-bg-color: #292929;
+  --footer-bg-color: #f8f8f8;
+  --main-font-color: #4f4e4e;
+  --secondary-font-color: #606060;
+  --button-color: #c2c2c2;
+  --emphasize-color:#58c93a;
+  --thin-border-color:#e1e0e0;
+  --greyed-out-icons-color: #e5e5e5;  
+  --nav-color: #818181;
+  
+}
+
+

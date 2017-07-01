@@ -1,0 +1,20 @@
+
+.cloud-cont{
+    padding: 20px 0px 20px 0;
+    background: lightgoldenrodyellow;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+
+    .tag{
+        color: darkolivegreen;
+        font-family: var(--main-font);
+
+        span:hover{
+            cursor: pointer;
+        }
+    }
+
+    
+}

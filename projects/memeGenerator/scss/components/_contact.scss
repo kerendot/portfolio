@@ -1,0 +1,68 @@
+footer{
+    background: var(--nav-color);
+}
+
+.contact-small{
+    background: var(--nav-color);
+
+
+}
+
+.btn-contact{
+        margin: 20px;
+        background: var(--section-color);
+        font-family: var(--main-font);
+        color: var(--main-color);
+}
+
+ .contact-full{
+     background: var(--nav-color);
+     width: 90%;
+     margin: auto;
+
+     h3,h2{
+         font-family: var(--main-font);
+         color: var(--main-color);
+           margin: 10px auto;
+     }
+
+     h3{
+         margin-bottom: 20px;
+     }
+
+     .form-group{
+         width: 100%;
+         display: flex;
+         justify-content: center;
+     }
+
+     input{
+         width: 90%;
+         max-width: 400px;
+         margin: 5px;
+         font-family: var(--main-font);
+         background: var(--input-bg-color);
+         color: var(--main-color);
+     }
+
+}
+
+input#toggle-contact:checked ~ .contact-full {
+    display: block;  
+}
+
+@media screen and (min-width:$medium-breakpoint){
+    .contact-small{
+        display:none;
+    }
+
+    .contact-full{
+        padding: 20px;
+        display: block; 
+
+        h3, h2{
+            display: block;
+        } 
+    }
+
+}

@@ -1,0 +1,101 @@
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P|Righteous);
+
+body{
+     background-color: lightgray;
+}
+.simon-container {
+    width: 400px;
+    margin: 0 auto;
+    font-family: 'Righteous', cursive;
+    text-align: center;
+   
+}
+.simon-container h1 {
+    text-align: center;
+    font-size: 78px;
+    padding: .2em 0 0 0;
+    margin: 0;
+}
+.pad.red {
+    left:15px;
+    top:15px;
+    background:rgb(255,0,0);
+    border-radius:320px 20px 20px;
+}
+.pad.green {
+    right:15px;
+    top:15px;
+    background:rgb(0,255,0);
+    border-radius:20px 320px 20px 20px;
+}
+.pad.yellow {
+    bottom:15px;
+    right:15px;
+    background:rgb(255,255,0);
+    border-radius:20px 20px 320px 20px;
+}
+.pad.blue {
+    bottom:15px;
+    left:15px;
+    background:rgb(0,0,255);
+    border-radius:20px 20px 20px 320px;
+}
+.simon-panel {
+    position:relative;
+    width:400px;
+    height:400px;
+    border-radius:50%;
+    background:#000;
+    margin:20px;
+    background:rgb(0,0,0);
+    background:linear-gradient(45deg,rgba(0,0,0,1) 0%,rgba(28,36,45,1) 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000',endColorstr='#1c242d',GradientType=1 );
+}
+.simon-panel::before {
+    position:absolute;
+    left:50%;
+    top:50%;
+    height:170px;
+    width:170px;
+    content:' ';
+    border-radius:85px;
+    display:block;
+    background:#000;
+    z-index:99;
+    margin: -85px;
+}
+.simon-panel .display {
+    position:absolute;
+    width:120px;
+    height:80px;
+    left:50%;
+    top:50%;
+    margin:-60px;
+    z-index:100;
+
+    font-family: 'Press Start 2P', cursive;
+    font-size: 17px;
+    line-height: 160%;
+    cursor: pointer;
+    display:block;
+    background:rgb(255,255,255);
+    background:radial-gradient(center,ellipse cover,rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff',endColorstr='#ededed',GradientType=1 );
+    padding-top:40px;/* dont remove */
+    border-radius:60px;
+    text-align:center;
+}
+.pad {
+    position:absolute;
+    width:180px;
+    height:180px;
+    background:rgba(20,20,20,1);
+    opacity: 0.5;
+    transition:all 300ms ease;
+}
+.pad.hover {
+    opacity: 0.7;
+}
+.pad.active {
+    opacity: 1;   
+}

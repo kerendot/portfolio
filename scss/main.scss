@@ -1,0 +1,67 @@
+@import 'vars';
+@import 'base-layout';
+ 
+// components:
+@import 'cards';
+@import 'sidenav';
+@import 'selection-category';
+
+// very small viewport - overflow the display 
+@media screen and (max-width: 400px) {
+    main{
+        width: 400px;
+    }
+
+    h1, main p, .cards-container{
+        width: 85%;
+    }
+}
+
+// mobile
+@media screen and (max-width: 480px) {
+    
+    p{
+        font-size: 16px;
+    }
+
+    .card {     
+        height: 80px;
+        transition: height 0.5s;
+        overflow: hidden;
+    }
+
+    .card:hover{
+        cursor: pointer;
+    }
+
+    .grow{
+    height:230px;
+    }
+
+}
+
+/*for tablets*/
+@media screen and (min-width: 576px) {
+	h1 {
+		font-size: 40px;
+	}
+
+    p{
+        font-size: 16px;
+    }
+
+}
+
+/*for desktops*/
+@media screen and (min-width: 768px) {
+	h1 {
+		font-size: 5vw;
+	}
+
+    p{
+        font-size: 16px;
+    }
+}
+
+
+

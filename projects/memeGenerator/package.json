@@ -1,0 +1,32 @@
+{
+  "name": "codingacademy-scss-template",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "npm-run-all --parallel browser styles",
+    "browser": "live-server",
+    "styles": "node-sass scss/style.scss -o dist --watch",
+    "build": "rm -rf build && copyfiles assets/* index.html assets/fonts/**/* dist/* build"
+  },
+  "devDependencies": {
+    "copyfiles": "^1.0.0",
+    "node-sass": "^3.13.0",
+    "npm-run-all": "^3.1.1"
+  },
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "jquery": "^3.2.1",
+    "normalize.css": "^5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moizes86/proj-2-memeGenerator.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/moizes86/proj-2-memeGenerator/issues"
+  },
+  "homepage": "https://github.com/moizes86/proj-2-memeGenerator#readme",
+  "description": ""
+}

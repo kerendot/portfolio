@@ -1,0 +1,61 @@
+.paper {
+  background: linear-gradient(to bottom,white 35px,#e6ebed 1px);
+  background-size: 100% 36px;
+  margin:20px auto;
+  position:relative;
+  overflow:hidden;
+  box-shadow:3px 3px 3px rgba(0,0,0,.2),0px 0px 6px rgba(0,0,0,.2);
+}
+.paper:before {
+    content:'';
+    display:block;
+    position:absolute;
+    z-index:1;
+    top:0;
+    left:30px;
+    height:100%;
+    width:8px;
+    border-left: 1px solid #f2e3df;
+    border-right: 1px solid #f2e3df;
+}
+
+.inner {
+    padding: 0px 8px;
+}
+
+header {
+    width:100%;
+    background:var(--header-color);
+    padding: .5em 0;
+}
+
+h1 {
+    font-size:rem(18px);
+    margin: 0;
+    display:inline;
+    margin-left: 20px;
+}
+  
+.content {
+    margin-top:0px;
+    font-size:20px;
+    line-height:36px;
+}
+
+.add-todo{
+    input{
+        margin-left: 18px;
+        font-family: var(--primary-font);
+    }
+}
+
+.footer{
+    position: absolute;
+    bottom: 0;
+
+    >* {
+    margin-left: 50px;
+    display: inline-block;
+    }
+}
+

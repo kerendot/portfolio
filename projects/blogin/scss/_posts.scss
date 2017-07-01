@@ -1,0 +1,101 @@
+.content-container{
+    border-right: 1px solid var(--thin-border-color);
+    border-left: 1px solid var(--thin-border-color);
+    padding-top:em(70px);
+}
+
+.post{
+        margin-bottom: em(80px);
+
+    .post-content{
+        margin-left: em(42px);
+        flex-direction: column; 
+    }
+
+    h3{
+        color: var(--main-font-color);
+        padding: 0;
+        margin: 0;
+        height: em(51px);
+        font-size: 2vw;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    p{
+        color: var(--secondary-font-color);
+        margin-bottom: em(20px);
+        margin-top: 0;
+        padding: 0;
+        line-height: em(20px);
+    
+    }
+
+    .intro-text{
+        max-height: em(100px);
+        max-width: 500px;
+        overflow: hidden;
+
+    }
+
+    button{
+        align-self:flex-start;
+        background-color: transparent;
+        border-radius: em(20px);
+        border: 2px solid var(--button-color);
+        color: var(--button-color);
+        font-family: var(--main-font);
+        font-weight: bold;
+        font-size: em(16px);
+        padding: em(10px) em(30px) em(10px) em(30px);
+        letter-spacing: 1px;
+
+            span{
+                margin-left: 10px;
+                display: none;
+            }
+
+        &:hover{
+            color: var(--emphasize-color);
+            border: 2px solid var(--emphasize-color);
+            cursor: pointer;
+
+            span{
+                display: initial;
+            }
+        }
+
+    }
+}
+
+
+@media (max-width: $mobile-breakpoint) {
+    .post{
+        // flex-wrap: wrap;
+        flex-direction: column;
+        margin-bottom: 20px;
+        h3{
+            font-size: 4vw;
+        }
+        div img {
+            flex: 1 1 100%;
+            margin-bottom: 20px;
+            
+        }
+        .post-content{
+            flex: 1 1 100%;
+        }
+        p{
+            // font-size: 2vw;
+        }
+        .intro-text{
+            margin-bottom: 1vw;
+        }
+    }
+}
+
+@media (max-width: $min-breakpoint){
+    .post h3{
+            font-size: 16px;
+    }
+}

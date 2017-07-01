@@ -1,0 +1,23 @@
+.bottom-nav{
+    border: 1px solid var(--thin-border-color);
+    border-left: none;
+    border-right: none;
+    height: em(74px);
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--nav-color);
+    text-transform: uppercase;
+    padding-left: 32px;
+    padding-right: 32px;
+    letter-spacing: 1px;
+
+    &:hover{
+        cursor: pointer;
+        color:var(--emphasize-color);
+    }
+
+    span{
+        padding: 5px;
+    }
+
+}

@@ -1,0 +1,21 @@
+$mobile-breakpoint: 550px;
+$medium-breakpoint: 700px;
+$large-breakpoint: 1000px;
+$max-breakpoint: 1200px;
+
+:root {
+  /* Layout */
+  // --container-width: 1000px;
+  /* Fonts */
+  --logo-font: Euro;
+  --main-font: Maven; 
+  /* Colors */
+  --main-color:#fff;
+  --nav-color: #323232;
+  --section-color: #2eb398;
+  --secondary-font-color:#20816d;
+  --footer-color: black;
+  --input-bg-color:#454545;
+}
+
+

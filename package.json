@@ -4,11 +4,16 @@
   "scripts": {
     "start": "npm-run-all --parallel serve styles",
     "serve": "live-server",
-    "styles": "node-sass -w css/main.scss css/main.css"
+    "styles": "node-sass -w scss/main.scss css/main.css"
   },
   "dependencies": {
     "bootstrap": "^3.3.7",
+    "bootstrap-sass": "^3.3.7",
+    "copyfiles": "^1.2.0",
+    "font-awesome": "^4.7.0",
     "jquery": "^3.2.1",
+    "node-sass": "^4.5.3",
+    "normalize.css": "^7.0.0",
     "npm-run-all": "^4.0.2"
   }
 }

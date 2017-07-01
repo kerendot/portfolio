@@ -1,0 +1,100 @@
+.pacman-top {
+  background-color: yellow;
+  height: 15px;
+  width: 30px;
+  border-radius: 100px 100px 0 0; }
+
+.pacman-bottom {
+  background-color: yellow;
+  height: 15px;
+  width: 30px;
+  border-radius: 0 0 100px 100px; }
+
+.top-right {
+  animation: spin1 0.5s infinite linear; }
+
+.bottom-right {
+  animation: spin2 0.5s infinite linear; }
+
+.top-left {
+  animation: spin2 0.5s infinite linear; }
+
+.bottom-left {
+  animation: spin1 0.5s infinite linear; }
+
+.pacman-right {
+  background-color: yellow;
+  height: 30px;
+  width: 15px;
+  border-radius: 0 100px 100px 0;
+  display: inline-block;
+  margin: 0; }
+
+.pacman-left {
+  background-color: yellow;
+  height: 30px;
+  width: 15px;
+  border-radius: 100px 0 0 100px;
+  display: inline-block; }
+
+.right-up {
+  animation: spin1 0.5s infinite linear; }
+
+.left-up {
+  animation: spin2 0.5s infinite linear; }
+
+.right-down {
+  animation: spin2 0.5s infinite linear; }
+
+.left-down {
+  animation: spin1 0.5s infinite linear; }
+
+/* Animation*/
+@keyframes spin1 {
+  0% {
+    transform: rotate(0deg); }
+  50% {
+    transform: rotate(-35deg); } }
+
+@keyframes spin2 {
+  0% {
+    transform: rotate(0deg); }
+  50% {
+    transform: rotate(35deg); } }
+
+.blinky {
+  background-image: -webkit-linear-gradient(45deg, transparent 50%, #ff5703 50%), -webkit-linear-gradient(135deg, transparent 50%, #ff5703 50%), -webkit-linear-gradient(#ff5703, #ff5703), -webkit-radial-gradient(56% 60%, circle, transparent 30%, #ff5703 30%), -webkit-radial-gradient(44% 60%, circle, transparent 30%, #ff5703 30%);
+  background-position: 100% 100%, 100% 100%, 50% 75%, 5% 0, 95% 0;
+  background-repeat: repeat-x, repeat-x, repeat-x, no-repeat, no-repeat;
+  background-size: .5em .5em, .5em .5em, .5em .5em, 1em 1em, 1em 1em;
+  border-radius: 100% 100% 0 0;
+  display: inline-block;
+  height: 1.6em;
+  margin: 0;
+  width: 1.6em;
+  animation: blinky 0.8s 0.2s steps(4, end) infinite; }
+
+@keyframes blinky {
+  100% {
+    background-position: 0 100%, 0 100%, 50% 75%, 5% 0, 95% 0; } }
+
+body {
+  background-color: black;
+  color: white; }
+
+.cell {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-size: 1.5em; }
+
+.wall {
+  background-color: white; }
+
+.ghost {
+  background-color: red; }
+
+table.test td {
+  border: 1px solid white;
+  height: 40px;
+  width: 40px; }
